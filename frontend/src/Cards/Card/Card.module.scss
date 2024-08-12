@@ -1,0 +1,68 @@
+.card{
+    background-color: #2B6CB6;
+
+    position: relative;
+    padding: 6em;
+    // min-width: 800px;
+    // max-width: 800px;
+    // min-height: 250px;
+
+    border-radius: 20px;
+
+    position: relative;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+
+    // .cardAnswer, .cardTitle{
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // height: 100%;
+        // width: 100%;
+    // }
+
+    .cardTitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardAnswer{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        text-align: center;
+
+        .answerContent{
+            font-size: 30px;
+            font-weight: 700;
+            color: #38E935;
+        }
+    }
+
+
+
+    &.rotated {
+        transform: rotateX(180deg);
+    }
+
+    .cardFront, .cardBack {
+        backface-visibility: hidden;
+        transform: rotateX(0deg);
+    }
+
+    .cardFront {
+        z-index: 2;
+    }
+
+    .cardBack {
+        transform: rotateX(180deg);
+    }
+
+}
